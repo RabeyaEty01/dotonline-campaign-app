@@ -1,0 +1,100 @@
+
+.sidebar{
+  background-color: white;
+  position: fixed;
+  left:0;
+  width: 60px;
+  height: 100%;
+  transition: 0.5s;
+  transition-property: right;
+
+}
+
+.checkbox-input{
+  display: none;
+}
+.sidebar a{
+  color: #C5C7D3;
+  display: block;
+  margin-left: 5px;
+  width: 100%;
+  line-height: 60px;
+  font-size: 24px;
+  text-decoration: none;
+  box-sizing: border-box;
+  transition: 0.5s;
+  transition-property: background;
+}
+.sidebar a span{
+  display: none;
+}
+
+.sidebar a:hover{
+  color: #673995;
+ 
+}
+
+.sidebar a .filter-svg-violate:hover{
+  filter: invert(26%) sepia(36%) saturate(3890%) hue-rotate(224deg) brightness(94%) contrast(103%);
+}
+.filter-svg-violate:hover{
+  filter: invert(26%) sepia(36%) saturate(3890%) hue-rotate(224deg) brightness(94%) contrast(103%);
+}
+
+label #sidebar_btn{
+  color: #C5C7D3;
+  position: fixed;
+  font-size: 24px;
+  cursor: pointer;
+  transition: 0.5s;
+  transition-property: color;
+}
+
+label #sidebar_cross{
+  display: none;
+}
+
+label #sidebar_btn:hover{
+  color: #673995;
+}
+
+#check:checked ~ .sidebar{
+  right: 70px;
+  width: 220px;
+  background-image: linear-gradient(#8339DE,
+  #3845D5);
+}
+
+#check:checked ~.sidebar label #sidebar_btn{
+ display: none;
+}
+#check:checked ~.checkbox-input{
+ display: none;
+}
+
+#check:checked ~.sidebar label #sidebar_cross{
+ display: block;
+ margin-left: -75px;
+ color: white;
+ position: fixed;
+ font-size: 24px;
+ cursor: pointer;
+ transition: 0.5s;
+ transition-property: color;
+}
+
+
+
+#check:checked ~.sidebar a span{
+  display: block;
+ 
+}
+
+
+#check:checked ~.sidebar a{
+  font-size: 20px;
+  display: flex;
+  margin-left: 25px;
+ 
+  
+}
