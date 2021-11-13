@@ -25,13 +25,15 @@ const Sidebar = () => {
                     </label>
                 </div>
 
-                <Link to="#" className="sidebar-link" > <img src={icon3} className="filter-svg-violate" alt="" /><span className="ms-3">Overview</span></Link>
-                
-                <Link to="#" > <img src={icon} className="filter-svg-violate" alt="" /><span className="ms-3">Creative sets</span></Link>
-                <Link to="#" > <img src={icon1} className="filter-svg-violate" alt="" /><span className="ms-3">Campaigns</span></Link>
-                <Link to="#" > <img src={icon2} className="filter-svg-violate" alt="" /><span className="ms-3">Reports</span></Link>
-                <Link to="#" > <img src={icon4} className="filter-svg-violate" alt="" /><span className="ms-3">Tools</span></Link>
-                <Link to="#" ><img src={icon5} className="filter-svg-violate" alt="" /><span className="ms-3 ">AdOps Tools</span></Link>
+                <Link to="#" className="sidebar-link" >
+                    <img src={icon3} className="filter-svg-violate" alt="" /><span className="ms-3">Overview</span>
+                </Link>
+
+                <Link to="#" className="sidebar-link" > <img src={icon} className="filter-svg-violate" alt="" /><span className="ms-3">Creative sets</span></Link>
+                <Link to="#" className="sidebar-link" > <img src={icon1} className="filter-svg-violate" alt="" /><span className="ms-3">Campaigns</span></Link>
+                <Link to="#" className="sidebar-link"> <img src={icon2} className="filter-svg-violate" alt="" /><span className="ms-3">Reports</span></Link>
+                <Link to="#" className="sidebar-link"> <img src={icon4} className="filter-svg-violate" alt="" /><span className="ms-3">Tools</span></Link>
+                <Link to="#" className="sidebar-link" ><img src={icon5} className="filter-svg-violate" alt="" /><span className="ms-3 ">AdOps Tools</span></Link>
             </div>
         </>
     );
