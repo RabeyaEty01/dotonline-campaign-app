@@ -1,10 +1,11 @@
 import React from 'react';
-import Sidebar from '../Shared/Sidebar/Sidebar';
+import Dashboard from '../Dashboard/Dashboard';
+
 
 const Home = () => {
     return (
         <div>
-            <Sidebar></Sidebar>
+           <Dashboard></Dashboard>
             
         </div>
     );

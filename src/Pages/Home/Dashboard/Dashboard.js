@@ -1,17 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import icon from '../../../../images/Group.svg';
-import icon1 from '../../../../images/Group 2.svg';
-import icon2 from '../../../../images/Group 4.svg';
-import icon3 from '../../../../images/Vector (4).svg';
-import icon4 from '../../../../images/Vector (5).svg';
-import icon5 from '../../../../images/Vector (6).svg';
-import icon6 from '../../../../images/Group 1 (3).svg';
-import './Sidebar.css';
-import Navbar from '../Navbar/Navbar';
+import icon from '../../../images/Group.svg';
+import icon1 from '../../../images/Group 2.svg';
+import icon2 from '../../../images/Group 4.svg';
+import icon3 from '../../../images/Vector (4).svg';
+import icon4 from '../../../images/Vector (5).svg';
+import icon5 from '../../../images/Vector (6).svg';
+import icon6 from '../../../images/Group 1 (3).svg';
+import './Dashboard.css';
+import Navbar from '../Shared/Navbar/Navbar';
+import Campaign from '../../Campaign/Campaign';
 
-const Sidebar = () => {
-
+const Dashboard = () => {
     return (
         <>
             <input type="checkbox" className="checkbox-input" id="check" />
@@ -38,10 +38,11 @@ const Sidebar = () => {
             </div>
 
             <div className="main-content">
-               <Navbar></Navbar>
+                <Navbar></Navbar>
+                <Campaign></Campaign>
             </div>
         </>
     );
 };
 
-export default Sidebar;
+export default Dashboard;

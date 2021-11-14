@@ -32,7 +32,7 @@ const Navbar = () => {
                             <ul class="navbar-nav  ">
                                 <li class="nav-item dropdown">
                                     <Link class="nav-link " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                        <i class="fas fa-plus-circle"></i>
+                                        <i class="fas fa-plus-circle dropdown-plus-icon"></i>
                                     </Link>
                                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                         <li>

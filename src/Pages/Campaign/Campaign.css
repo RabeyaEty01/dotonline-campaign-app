@@ -1,0 +1,122 @@
+  .campaign-section {
+    margin-left: 70px;
+}
+.col-6 .card{
+    border-radius: 8px;
+    height: 319px;
+    
+}
+
+.card-header{
+    color: #444444;
+    font-size: 16px;
+    font-weight: 600;
+    
+}
+
+.social-icon{
+    width: 35px;
+    height: 35px;
+    border: 1px solid gray;
+    border-radius: 2px;
+}
+.location-icon{
+    width: 22px;
+    height: 22px;
+    border: 2px solid #C5C7D3;
+    border-radius: 3px;
+}
+
+
+
+.campaign-input-group input{
+border-top-left-radius: 50px;
+border-bottom-left-radius: 50px;
+border-right: none;
+}
+.campaign-input-group span{
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+.campaign-input-group-2{
+    width: 257px;
+}
+.campaign-input-group-2 input{
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+}
+.campaign-input-group-2 span{
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    background-color: #F9F9F9;
+}
+
+
+.capaign-input-group-3{
+    width: 123px;
+}
+.input-3{
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+}
+.span-3{
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    background-color: #F9F9F9;
+}
+
+
+
+input[type='radio']:checked:after {
+    width: 14px;
+    height: 14px;
+    top: -5px;
+    border-radius: 15px;
+    position: relative;
+    background-color: #007BFF;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid #EBEBEB;
+}
+
+/* for checkbox  */
+input[type='checkbox'] +label{
+    display: block;
+}
+input[type='checkbox']{
+    display: none;
+}
+
+input[type='checkbox'] + label::before{
+    content: "\2714";
+    border: 0.1em solid #000;
+    border-radius: 0.2em;
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    padding-left: 2px;
+    vertical-align: bottom;
+    color: transparent;
+}
+
+
+input[type='checkbox']:checked + label::before{
+    background-color: #007BFF;
+    border-color: #007BFF;
+    color: #fff;
+
+}
+
+.device-brand-content{
+    border-left: 3px solid #EBEBEB;
+}
+
+.text-area-field{
+    width: 406px;
+    height: 106px;
+    border-radius: 20px;
+    border: 2px solid #EBEBEB;
+    padding: 20px;
+}

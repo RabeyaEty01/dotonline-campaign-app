@@ -88,6 +88,12 @@
     margin-left: -20px;
     
 }
+
+.dropdown-plus-icon:hover {
+
+   color: #673995;
+    
+}
 .arrow-icon{
     color: #C5C7D3;
     width: 24px;
