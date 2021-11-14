@@ -7,10 +7,11 @@ import icon3 from '../../../images/Vector (4).svg';
 import icon4 from '../../../images/Vector (5).svg';
 import icon5 from '../../../images/Vector (6).svg';
 import icon6 from '../../../images/Group 1 (3).svg';
+import icon7 from '../../../images/Vector (12).svg';
 import './Dashboard.css';
 import Navbar from '../Shared/Navbar/Navbar';
 import Campaign from '../../Campaign/Campaign';
-import Footer from '../Shared/Footer/Footer';
+
 
 const Dashboard = () => {
     return (
@@ -36,12 +37,18 @@ const Dashboard = () => {
                 <Link to="#" className="sidebar-link"> <img src={icon2} className="filter-svg-violate" alt="" /><span className="ms-3">Reports</span></Link>
                 <Link to="#" className="sidebar-link"> <img src={icon4} className="filter-svg-violate" alt="" /><span className="ms-3">Tools</span></Link>
                 <Link to="#" className="sidebar-link" ><img src={icon5} className="filter-svg-violate" alt="" /><span className="ms-3 ">AdOps Tools</span></Link>
+
             </div>
 
             <div className="main-content">
                 <Navbar></Navbar>
                 <Campaign></Campaign>
-                <Footer></Footer>
+                <div className="fixed-bottom footer-section d-flex ">
+                    <div className="footer-d-block" id="footer-d-block">
+                        <Link to="#" className="sidebar-link " ><img src={icon7} className="filter-svg-violate sidebar-img mt-3" alt="" /><span className="ms-3 footer-link-text mt-3">Help</span></Link>
+                    </div>
+                    <p className="footer-copyright-text m-2">© 2021 Eskimi. All rights reserved.</p>
+                </div>
             </div>
         </>
     );

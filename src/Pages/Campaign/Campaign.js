@@ -13,6 +13,7 @@ import icon7 from '../../images/Vector (11).svg';
 
 import './Campaign.css';
 
+
 const Campaign = () => {
     return (
         <div className="campaign-section">
