@@ -7,6 +7,9 @@ import icon5 from '../../images/Vector (8).svg';
 import icon6 from '../../images/Group (2).svg';
 import doller from '../../images/doller.svg';
 import location from '../../images/location.svg';
+import location1 from '../../images/location-icon.svg';
+import location2 from '../../images/Vector (10).svg';
+import icon7 from '../../images/Vector (11).svg';
 
 import './Campaign.css';
 
@@ -16,6 +19,7 @@ const Campaign = () => {
             <div class="row text-start">
                 <div class="col-8">
                     <div className="row">
+                        {/* left column 1 */}
                         <div className="col-6">
                             <div class="card  mb-3">
                                 <div class="card-header  bg-white">Name & type</div>
@@ -45,6 +49,7 @@ const Campaign = () => {
                                 </div>
                             </div>
                         </div>
+                        {/* left column 2 */}
                         <div className="col-6">
                             <div class="card text-dark mb-3">
                                 <div class="card-header bg-white">Launch date & budget</div>
@@ -97,6 +102,8 @@ const Campaign = () => {
                             </div>
                         </div>
                     </div>
+
+                    {/* left bottom column  */}
                     <div className="col-12 platform-section">
                         <div class="card text-dark  mb-3">
                             <div class="card-header bg-white d-flex justify-content-between">
@@ -201,7 +208,7 @@ const Campaign = () => {
                                                 <img src={icon5} alt="" />
                                             </span>
                                         </div>
-                                        
+
                                         <p class="card-title my-1 ms-3">Multiple operator SIM card</p>
                                         <div class="input-group campaign-input-group">
                                             <input type="text" placeholder="Select any" class="form-control ms-3" />
@@ -216,7 +223,7 @@ const Campaign = () => {
                                                 <img src={icon5} alt="" />
                                             </span>
                                         </div>
-                                       
+
                                         <p class="card-title my-1 ms-3">Operator churn</p>
                                         <div class="input-group campaign-input-group">
                                             <input type="text" placeholder="Select any" class="form-control ms-3" />
@@ -231,16 +238,29 @@ const Campaign = () => {
                                                 <img src={icon5} alt="" />
                                             </span>
                                         </div>
-                                       
+
                                     </div>
 
                                 </div>
                             </div>
                         </div>
                     </div>
+
+                    <div className="col-12">
+                        <div class="card text-dark mb-3 me-3" style={{backgroundColor:"#FFFADE"}}>
+                            <div className="d-flex justify-content-between">
+                                <h6 className="p-2">Landing & creatives</h6>
+                                <div class="p-2"><span> <img src={icon7} alt="" /></span></div>
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
 
+                {/* right column */}
                 <div class="col-4">
+
+                    {/* right column-1 */}
                     <div class="card text-dark mb-3 me-3">
                         <div class="card-header bg-white d-flex justify-content-between">
                             <span>Location & audiences</span>
@@ -248,11 +268,232 @@ const Campaign = () => {
                         </div>
                         <div class="card-body">
                             <p class="card-title">Choose country</p>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <div class="card-text">
+                                <div class="input-group campaign-input-group">
+                                    <input type="text" placeholder="Select one" class="form-control " />
+                                    <span class="input-group-text">
+                                        <img src={location1} alt="" />
+                                    </span>
+                                </div>
+
+                            </div>
+
+                            <div className="d-flex">
+                                <div className="input-group-card-div me-3">
+                                    <p class="card-title">City</p>
+                                    <div class="input-group campaign-input-group-3">
+                                        <input type="text" placeholder="Search for city" class="form-control input-3" />
+                                        <span class="input-group-text span-3">
+                                            <img src={location2} alt="" />
+                                        </span>
+                                    </div>
+
+                                </div>
+                                <div className="input-group-card-div me-3">
+                                    <p class="card-title">State/ county</p>
+                                    <div class="input-group campaign-input-group-3">
+                                        <input type="text" placeholder="Search for state / county" class="form-control input-3" />
+                                        <span class="input-group-text span-3">
+                                            <img src={location2} alt="" />
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <p className="pt-3">  <input type="checkbox" id="checkbox4" /> <label htmlFor="checkbox4"> GPS only</label></p>
+
+                            <p class="card-title my-2">Audiences</p>
+                            <div class="card-text device-brand-content">
+                                <p class="card-title my-2 ms-3">Audiences include</p>
+                                <div className="d-flex">
+                                    <div class="input-group">
+                                        <input type="text" placeholder="Select any" class="form-control ms-3 rounded-pill" />
+
+                                    </div>
+                                    <div className="ms-3">
+                                        <input id="radio" type="radio" /><span className="me-5"> Any (OR)</span>
+
+                                        <input width="14px" height="14px" type="radio" /><span> All (AND)</span>
+                                    </div>
+                                </div>
+
+                                <p class="card-title my-2 ms-3">Audiences exclude</p>
+
+                                <div className="d-flex mt-2">
+                                    <div class="input-group campaign-input-group">
+                                        <input type="text" placeholder="Select any" class="form-control ms-3 rounded-pill" />
+                                    </div>
+                                    <div className="ms-3">
+                                        <input id="radio" type="radio" /><span className="me-5"> Any (OR)</span>
+
+                                        <input width="14px" height="14px" type="radio" /><span> All (AND)</span>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <p class="card-title my-2">Demographics</p>
+                            <div class="card-text device-brand-content">
+                                <div className="d-flex">
+                                    <div className="input-group-card-div me-3 ms-3">
+                                        <p class="card-title">Age</p>
+                                        <div class="input-group campaign-input-group-3">
+                                            <div class="input-group campaign-input-group">
+                                                <input type="text" placeholder="All" class="form-control " />
+                                                <span class="input-group-text bg-white">
+                                                    <img src={icon5} alt="" />
+                                                </span>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div className="input-group-card-div me-3">
+                                        <p class="card-title">Gender</p>
+                                        <div class="input-group campaign-input-group-3">
+                                            <div class="input-group campaign-input-group">
+                                                <input type="text" placeholder="All" class="form-control " />
+                                                <span class="input-group-text bg-white">
+                                                    <img src={icon5} alt="" />
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <p class="card-title mt-2">Languages</p>
+                            <div class="card-text">
+                                <div class="input-group campaign-input-group">
+                                    <input type="text" placeholder="All" class="form-control " />
+                                    <span class="input-group-text bg-white">
+                                        <img src={icon5} alt="" />
+                                    </span>
+                                </div>
+                            </div>
+                            <p class="card-title mt-2"><span>SEC (socio-economic class) groups</span></p>
+                            <div class="card-text">
+                                <div class="input-group campaign-input-group">
+                                    <input type="text" placeholder="All" class="form-control " />
+                                    <span class="input-group-text bg-white">
+                                        <img src={icon5} alt="" />
+                                    </span>
+                                </div>
+                            </div>
+                            <p class="card-title mt-2"><span>LSM (living standards measure) groups</span></p>
+                            <div class="card-text">
+                                <div class="input-group campaign-input-group">
+                                    <input type="text" placeholder="All" class="form-control " />
+                                    <span class="input-group-text bg-white">
+                                        <img src={icon5} alt="" />
+                                    </span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    {/* right column-2 */}
+                    <div className="col-12">
+                        <div class="card text-dark mb-3 me-3">
+                            <div class="card-header bg-white d-flex justify-content-between">
+                                <span>Optimisations, deals & packages</span>
+                                <img className="location-icon  img-fluid pt-2" src={location} alt="" />
+                            </div>
+                            <div class="card-body">
+                                <p class="card-title my-2">Impression capping</p>
+                                <div class="card-text device-brand-content">
+                                    <div className="ms-3">
+                                        <input type="checkbox" id="checkbox6" /> <label htmlFor="checkbox6"> Default impression capping</label>
+                                    </div>
+
+
+                                    <p class="card-title my-2 ms-3">Impressions</p>
+                                    <div class="card-text d-flex ms-3">
+                                        <div className="input-group-card-div me-3">
+                                            <div class="input-group campaign-input-group-3">
+                                                <input type="text" placeholder="1" class="form-control input-3" />
+                                                <span class="input-group-text span-3">
+                                                    <i class=" text-secondary fas fa-hashtag"></i>
+                                                </span>
+                                            </div>
+
+                                        </div>
+                                        <div className="input-group-card-div me-3">
+                                            <div class="input-group campaign-input-group-3">
+                                                <input type="text" placeholder="1" class="form-control rounded-pill" />
+
+                                            </div>
+
+                                        </div>
+                                        <div >
+                                            <div class="input-group campaign-input-group-3">
+                                                <div class="input-group campaign-input-group">
+                                                    <input type="text" placeholder="All" class="form-control " />
+                                                    <span class="input-group-text bg-white">
+                                                        <img src={icon5} alt="" />
+                                                    </span>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div className="mx-2 text-secondary pt-1">
+                                            <i className="fas fa-plus"></i>
+                                        </div>
+                                        <div className="text-secondary pt-1">
+                                            <i className="fas fa-minus"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <p class="card-title mt-2">Auto-Optimisation</p>
+                                <div class="card-text">
+                                    <div class="input-group campaign-input-group">
+                                        <input type="text" placeholder="All" class="form-control " />
+                                        <span class="input-group-text bg-white">
+                                            <img src={icon5} alt="" />
+                                        </span>
+                                    </div>
+                                </div>
+                                <p class="card-title mt-2"><span>Ad exchanges</span></p>
+                                <div class="card-text">
+                                    <div class="input-group campaign-input-group">
+                                        <input type="text" placeholder="All" class="form-control " />
+                                        <span class="input-group-text bg-white">
+                                            <img src={icon5} alt="" />
+                                        </span>
+                                    </div>
+                                </div>
+                                <p class="card-title mt-2"><span>Ad placement positions</span></p>
+                                <div class="card-text">
+                                    <div class="input-group campaign-input-group">
+                                        <input type="text" placeholder="All" class="form-control " />
+                                        <span class="input-group-text bg-white">
+                                            <img src={icon5} alt="" />
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <p class="card-title my-2">Private marketplace</p>
+                                <div class="card-text device-brand-content">
+                                    <div class="input-group campaign-input-group">
+                                        <input type="text" placeholder="All" class="form-control ms-3" />
+                                        <span class="input-group-text bg-white">
+                                            <img src={icon5} alt="" />
+                                        </span>
+                                    </div>
+                                    <div className="ms-3">
+                                        <input id="radio" type="radio" /><span className="me-3"> Include</span>
+                                        <input width="14px" height="14px" type="radio" /><span> Exclude</span>
+                                    </div>
+                                </div>
+
+                            </div>
                         </div>
                     </div>
                 </div>
+
             </div>
+           
         </div>
     );
 };

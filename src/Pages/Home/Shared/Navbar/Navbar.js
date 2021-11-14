@@ -110,7 +110,7 @@ const Navbar = () => {
                 </div >
             </div>
 
-            <div  className="text-start nav-text-div">
+            <div  className="text-start nav-text-div me-3">
                 <p className="ms-3"><span>Jump to: Name & Type   |   Launch date & Budget   |   Location & Audiences   |   Platforms, Telco & Devices   |   Optimisations, deals & packages   |   Landing & Creatives </span></p>
             </div>
         </>

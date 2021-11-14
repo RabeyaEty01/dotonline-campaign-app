@@ -10,6 +10,7 @@ import icon6 from '../../../images/Group 1 (3).svg';
 import './Dashboard.css';
 import Navbar from '../Shared/Navbar/Navbar';
 import Campaign from '../../Campaign/Campaign';
+import Footer from '../Shared/Footer/Footer';
 
 const Dashboard = () => {
     return (
@@ -40,6 +41,7 @@ const Dashboard = () => {
             <div className="main-content">
                 <Navbar></Navbar>
                 <Campaign></Campaign>
+                <Footer></Footer>
             </div>
         </>
     );
