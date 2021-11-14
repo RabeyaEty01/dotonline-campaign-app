@@ -28,14 +28,12 @@
   display: none;
 }
 
-.sidebar a:hover{
-  color: #673995;
- 
-}
 
 .sidebar a .filter-svg-violate:hover{
   filter: invert(26%) sepia(36%) saturate(3890%) hue-rotate(224deg) brightness(94%) contrast(103%);
+
 }
+
 .filter-svg-violate:hover{
   filter: invert(26%) sepia(36%) saturate(3890%) hue-rotate(224deg) brightness(94%) contrast(103%);
 }
@@ -71,6 +69,13 @@ label #sidebar_btn:hover{
  display: none;
 }
 
+.sidebar .sidebar-link:hover{
+ 
+ border-left: 5px solid #673995;
+ 
+}
+
+
 #check:checked ~.sidebar label #sidebar_cross{
  display: block;
  margin-left: -75px;
@@ -103,6 +108,9 @@ label #sidebar_btn:hover{
   display: flex;
   padding-left: 15px;
   padding-right: 5px;
- 
-  
+
+}
+
+#check:checked ~.main-content{
+  margin-left: 160px;
 }

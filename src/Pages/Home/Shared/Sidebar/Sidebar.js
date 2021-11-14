@@ -8,6 +8,7 @@ import icon4 from '../../../../images/Vector (5).svg';
 import icon5 from '../../../../images/Vector (6).svg';
 import icon6 from '../../../../images/Group 1 (3).svg';
 import './Sidebar.css';
+import Navbar from '../Navbar/Navbar';
 
 const Sidebar = () => {
 
@@ -16,7 +17,7 @@ const Sidebar = () => {
             <input type="checkbox" className="checkbox-input" id="check" />
 
             <div className="sidebar">
-                <div className="mb-5 ">
+                <div className="mb-5 mt-3 ">
                     <label htmlFor="check" >
                         <img className="filter-svg-violate" src={icon6} id="sidebar_btn" alt="" />
                     </label>
@@ -34,6 +35,10 @@ const Sidebar = () => {
                 <Link to="#" className="sidebar-link"> <img src={icon2} className="filter-svg-violate" alt="" /><span className="ms-3">Reports</span></Link>
                 <Link to="#" className="sidebar-link"> <img src={icon4} className="filter-svg-violate" alt="" /><span className="ms-3">Tools</span></Link>
                 <Link to="#" className="sidebar-link" ><img src={icon5} className="filter-svg-violate" alt="" /><span className="ms-3 ">AdOps Tools</span></Link>
+            </div>
+
+            <div className="main-content">
+               <Navbar></Navbar>
             </div>
         </>
     );
