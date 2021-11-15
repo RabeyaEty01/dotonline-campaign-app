@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import icon2 from '../../images/google.png';
 import icon1 from '../../images/icon2.png';
 import icon3 from '../../images/image 3.png';
@@ -10,11 +10,34 @@ import location from '../../images/location.svg';
 import location1 from '../../images/location-icon.svg';
 import location2 from '../../images/Vector (10).svg';
 import icon7 from '../../images/Vector (11).svg';
-
 import './Campaign.css';
 
 
 const Campaign = () => {
+
+    const [countries, setCountries] = useState([]);
+    const [displayCountry, setDisplayCountry] = useState([]);
+
+    useEffect(() => {
+        fetch('https://restcountries.com/v3.1/all')
+            .then(res => res.json())
+            .then(data => setCountries(data))
+    }, [])
+
+    const handleSearchCountry = event => {
+        const searchText = event.target.value;
+        const matchEdCountry = countries.filter(country => country.name.common.toLowerCase().includes(searchText.toLowerCase()));
+
+        if (searchText === "") {
+            setDisplayCountry([]);
+        }
+        else {
+            setDisplayCountry(matchEdCountry);
+        }
+
+    }
+
+
     return (
         <div className="campaign-section">
             <div class="row text-start">
@@ -248,7 +271,7 @@ const Campaign = () => {
                     </div>
 
                     <div className="col-12">
-                        <div class="card text-dark mb-3 me-3" style={{backgroundColor:"#FFFADE"}}>
+                        <div class="card text-dark mb-3 me-3" style={{ backgroundColor: "#FFFADE" }}>
                             <div className="d-flex justify-content-between">
                                 <h6 className="p-2">Landing & creatives</h6>
                                 <div class="p-2"><span> <img src={icon7} alt="" /></span></div>
@@ -271,11 +294,43 @@ const Campaign = () => {
                             <p class="card-title">Choose country</p>
                             <div class="card-text">
                                 <div class="input-group campaign-input-group">
-                                    <input type="text" placeholder="Select one" class="form-control " />
-                                    <span class="input-group-text">
-                                        <img src={location1} alt="" />
-                                    </span>
+
+
+                                    {/* search country by name */}
+                                    <input onChange={handleSearchCountry}
+                                        type="text"
+                                        placeholder="Select one"
+                                        class="form-control " />
+                                    
+                                         <span class="input-group-text">
+                                            <img src={location1} alt="" />
+                                        </span>
+                                           
+                                    
+
+
+
                                 </div>
+                                {/* search result div  */}
+
+                                {displayCountry.length != 0 &&
+
+                                    <div className="search-country-result">
+                                         <h6 className="mt-3 ms-3 text-primary">Check All | Uncheck All</h6>
+                                        {  
+                                            displayCountry.map((country, index) => {
+
+                                                return <div className="search-Item">
+                                                    <div className="ms-3">
+                                                        <input type="checkbox" id={index} /> <label htmlFor={index}> <span className="ms-3">{country.name.common}</span> </label>
+                                                    </div>
+
+                                                </div>
+
+                                            })
+                                        }
+                                    </div>
+                                }
 
                             </div>
 
@@ -494,7 +549,7 @@ const Campaign = () => {
                 </div>
 
             </div>
-           
+
         </div>
     );
 };
