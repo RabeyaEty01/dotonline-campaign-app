@@ -145,3 +145,8 @@ input[type='checkbox']:checked + label::before{
     color: black;
 }
 
+/* time scheduling modal  */
+.modal-content{
+    margin-left:-250px;
+    width: 1080px;
+}

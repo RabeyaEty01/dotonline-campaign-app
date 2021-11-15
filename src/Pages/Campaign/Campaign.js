@@ -11,6 +11,7 @@ import location1 from '../../images/location-icon.svg';
 import location2 from '../../images/Vector (10).svg';
 import icon7 from '../../images/Vector (11).svg';
 import './Campaign.css';
+import ModalTable from '../Home/ModalTable/ModalTable';
 
 
 const Campaign = () => {
@@ -42,7 +43,7 @@ const Campaign = () => {
         <div className="campaign-section">
             <div class="row text-start">
                 <div class="col-8">
-                    <div className="row">
+                    <div className="row ">
                         {/* left column 1 */}
                         <div className="col-6">
                             <div class="card  mb-3">
@@ -86,7 +87,44 @@ const Campaign = () => {
                                                 <img src={icon6} alt="" />
                                             </span>
                                         </div>
-                                        <span className="text-primary">Time scheduling</span>
+                                        <span type="button" className="text-primary border-0" data-bs-toggle="modal" data-bs-target="#exampleModal">Time scheduling</span>
+
+                                        {/* time scheduling modal */}
+
+
+                                        {/* <!-- Modal --> */}
+                                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-centered">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h6 class="modal-title" id="exampleModalLabel">Time scheduling</h6>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                      <ModalTable></ModalTable>
+                                                    </div>
+                                                    <div class="modal-footer d-flex ">
+                                                        <div>
+                                                            <button type="button" class="btn btn-secondary footer-btn-1" data-bs-dismiss="modal">Close</button>
+                                                        </div>
+                                                        <div>
+                                                            <button type="button" class="btn btn-primary footer-btn-2">Save changes</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+
+
+
+
+
+
+
+
+
                                     </p>
                                     <p class="card-text d-flex">
                                         <div className="input-group-card-div me-3">
@@ -301,12 +339,12 @@ const Campaign = () => {
                                         type="text"
                                         placeholder="Select one"
                                         class="form-control " />
-                                    
-                                         <span class="input-group-text">
-                                            <img src={location1} alt="" />
-                                        </span>
-                                           
-                                    
+
+                                    <span class="input-group-text">
+                                        <img src={location1} alt="" />
+                                    </span>
+
+
 
 
 
@@ -316,8 +354,8 @@ const Campaign = () => {
                                 {displayCountry.length != 0 &&
 
                                     <div className="search-country-result">
-                                         <h6 className="mt-3 ms-3 text-primary">Check All | Uncheck All</h6>
-                                        {  
+                                        <h6 className="mt-3 ms-3 text-primary">Check All | Uncheck All</h6>
+                                        {
                                             displayCountry.map((country, index) => {
 
                                                 return <div className="search-Item">
@@ -548,9 +586,9 @@ const Campaign = () => {
                     </div>
                 </div>
 
-            </div>
+            </div >
 
-        </div>
+        </div >
     );
 };
 
